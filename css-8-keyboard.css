@@ -1,0 +1,5 @@
+/* ThaiFlex — หน้าเข้าสู่ระบบ/สมัคร: ปรับพื้นที่ตามคีย์บอร์ด iPhone เพื่อให้เลื่อนไปช่องถัดไปได้ */
+#au{top:var(--vvt,0px);bottom:auto;height:var(--vvh,100%)}
+#af .sheet{padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+body.kb #af .fh{height:96px}
+body.kb #af .sheet{padding-bottom:120px}

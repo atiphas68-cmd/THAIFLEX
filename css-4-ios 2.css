@@ -1,0 +1,24 @@
+/* ThaiFlex — เสถียรบน iPhone + intro */
+/* ===== v4: เสถียรบน iPhone + ลื่นขึ้น ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+body{overflow-x:clip;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+:root{padding-bottom:0}
+.w{min-width:0}
+/* กัน iOS ซูมเองตอนแตะช่องพิมพ์ (ต้นเหตุจอเลื่อน/แถบเมนูเพี้ยน) */
+input,select,textarea{font-size:16px}
+/* ตารางไม่ขยายเกินจอ */
+.pg,.mp,.f2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pg>*,.mp>*,.f2>*,.grid>*,.st3>*{min-width:0}
+.pg svg,.mp svg{max-width:100%}
+/* แถบเมนูล่าง: ล็อกติดขอบล่างเสมอ */
+.tabs{left:0;right:0;width:auto;max-width:640px;margin:0 auto;transform:translateZ(0);-webkit-transform:translateZ(0);backface-visibility:hidden;padding-bottom:max(10px,calc(env(safe-area-inset-bottom,0px) - 6px))}
+/* หน้า intro สั้นลงและนุ่มขึ้น */
+#sp{animation:spo .45s 1.7s ease forwards}
+#sp .ar{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+#sp .lg{animation:pop .5s .3s cubic-bezier(.2,1.4,.4,1) both}
+#sp .wm b{animation:fi .4s .1s both}#sp .wm i{animation:fi .4s .4s both}#sp small{animation:fi .4s .7s both}
+#au:not(.hid){animation:fin .45s ease}
+#p0,#p1,#p2,#p3,#p4{animation:pin .3s ease}
+@keyframes fin{from{opacity:0}}
+@keyframes pin{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){#sp,#sp *,#au,#p0,#p1,#p2,#p3,#p4{animation-duration:.01s!important;animation-delay:0s!important}}

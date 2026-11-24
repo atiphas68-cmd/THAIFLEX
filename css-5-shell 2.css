@@ -1,0 +1,18 @@
+/* ThaiFlex — โครงเต็มจอ แถบล็อก */
+/* ===== v5: โครงแอปเต็มจอ — เนื้อหาเลื่อนในกรอบ แถบเมนูอยู่นอกกรอบ ไม่ขยับ ===== */
+html,body{height:100%;overflow:hidden;overscroll-behavior:none}
+body{position:fixed;inset:0;width:100%}
+:root{padding:0}
+.w{position:fixed;top:0;bottom:0;left:0;right:0;max-width:640px;margin:0 auto;overflow-y:auto;overflow-x:clip;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;padding:calc(12px + env(safe-area-inset-top,0px)) 12px calc(130px + env(safe-area-inset-bottom,0px))}
+
+/* ===== v6: หัวโปรไฟล์ล็อกติดบนสุด ไม่มีช่องว่างให้เนื้อหาโผล่ + แถบเมนูไม่มีกรอบเพี้ยน ===== */
+.w{padding-top:0}
+.w::before{content:"";display:block;height:calc(12px + env(safe-area-inset-top,0px))}
+.apv{top:0;box-shadow:0 8px 12px -10px rgba(20,60,30,.35)}
+.apb{width:88px;height:88px}
+.tabs{transform:none;-webkit-transform:none;backface-visibility:visible}
+.tabs button{-webkit-appearance:none;appearance:none;background:transparent!important;box-shadow:none}
+
+/* ===== v7: แถบตัวละครล็อกติดบนสุดจริง (fixed) — ไม่ขยับตามการเลื่อน ===== */
+.apv{position:fixed;top:0;left:50%;transform:translateX(-50%);width:min(100%,640px);box-sizing:border-box;margin:0;padding:calc(8px + env(safe-area-inset-top,0px)) 22px 10px;background:var(--card);border-bottom:1px solid var(--ln);border-radius:0 0 22px 22px;box-shadow:0 8px 18px -10px rgba(20,60,30,.4);z-index:30}
+#p3{padding-top:0}

@@ -1,0 +1,7 @@
+/* ThaiFlex — โปรไฟล์แบบแยกส่วน: แถบตัวละครเป็นส่วนบนที่ล็อกตายตัว เนื้อหาเลื่อนอยู่ใต้แถบ ไม่ซ้อนกัน */
+body.prof .w{top:var(--apvh,108px);padding-top:12px}
+body.prof .w::before{display:none}
+body.prof #tp0,body.prof .sub{display:none!important}
+.apv{position:fixed;top:0;left:50%;transform:translateX(-50%);width:min(100%,640px);box-sizing:border-box;margin:0;z-index:30;background:var(--card);border-radius:0 0 22px 22px;box-shadow:0 8px 18px -10px rgba(20,60,30,.4)}
+#cav,#cpf{margin-top:0}
+#cav h2,#cpf h2{margin-top:0}
